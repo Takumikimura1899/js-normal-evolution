@@ -14,25 +14,53 @@ console.log(img.img1);
 setBtn.addEventListener('click', function() {
     showImg.innerHTML = '';
     const check = Math.floor(Math.random() * 10);
-    const first = document.createElement('img');
-    showImg.appendChild(first);
-    first.setAttribute('src', img.img1);
+
+    // firstDiv
+    const firstDiv = document.createElement('div');
+    const firstImg = document.createElement('img');
+    const firstName = document.createElement('p');
+    showImg.appendChild(firstDiv);
+    firstDiv.appendChild(firstImg,);
+    firstDiv.appendChild(firstName,);
+    firstName.textContent = "原人";
+    firstImg.setAttribute('src', img.img1);
     
+    // secondDiv
     if (check > 3) {
-        const second = document.createElement('img');
-        showImg.appendChild(second);
-        second.setAttribute('src', img.img2);
+        const secondDiv = document.createElement('div');
+        const secondImg = document.createElement('img');
+        const secondName = document.createElement('p');
+        showImg.appendChild(secondDiv);
+        secondDiv.appendChild(secondImg,);
+        secondDiv.appendChild(secondName,);
+        secondName.textContent = "旧人";
+        secondImg.setAttribute('src', img.img2);
     }; 
+
+    // thirdDiv
     if (check > 6) {
-        const third = document.createElement('img');
-        showImg.appendChild(third);
-        third.setAttribute('src', img.img3);
+        const thirdDiv = document.createElement('div');
+        const thirdImg = document.createElement('img');
+        const thirdName = document.createElement('p');
+        showImg.appendChild(thirdDiv);
+        thirdDiv.appendChild(thirdImg,);
+        thirdDiv.appendChild(thirdName,);
+        thirdName.textContent = "新人";
+        thirdImg.setAttribute('src', img.img3);
     }; 
+
+    // fourthDiv
     if (check > 8) {
-        const fourth = document.createElement('img');
-        showImg.appendChild(fourth);
-        fourth.setAttribute('src', img.img4);
+        const fourthDiv = document.createElement('div');
+        const fourthImg = document.createElement('img');
+        const fourthName = document.createElement('p');
+        showImg.appendChild(fourthDiv);
+        fourthDiv.appendChild(fourthImg,);
+        fourthDiv.appendChild(fourthName,);
+        fourthName.textContent = "現代人";
+        fourthImg.setAttribute('src', img.img4);
     }; 
+    console.log(showImg);
 });
 
 resetBtn.addEventListener('click', () => {
